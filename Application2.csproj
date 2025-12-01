@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>false</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- PostgreSQL provider for EF Core -->
+    <PackageReference Include="conjur-api" Version="3.2.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.0" />
+
+    <!-- Tools for EF Core migrations -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0" />
+  </ItemGroup>
+
+</Project>
+
