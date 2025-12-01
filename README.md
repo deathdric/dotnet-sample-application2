@@ -17,7 +17,7 @@ production code.
 
 You need to have .NET 9.0 installed. There should be no operating system restrictions (I coded on Linux FYI).
 
-You need to have a postgresql database setup (see [this repository](https://github.com/deathdric/infrastructure-setup-scripts/postgresql), where I assume that you are using `application2` for the application name). Unlike for the java sample I didn't manage migrations in the application,
+You need to have a postgresql database setup (see [this repository](https://github.com/deathdric/infrastructure-setup-scripts), where I assume that you are using `application2` for the application name). Unlike for the java sample I didn't manage migrations in the application,
 so you'll have to run the [schema creation script](migrations/create_tables.sql) explicitly (you can use liquibase if you prefer, or even entity framework migrations, but managing them with a secrets manager will be on your own) :
 
 ```
@@ -36,7 +36,7 @@ Now you can decide whether you want to run with or without a scret manager.
 
 ### With conjur
 
-See [this repository](https://github.com/deathdric/infrastructure-setup-scripts/conjur) for howto setup conjur. The sample json configuration file expects that this is application2, so make sure that you have initialized the proper setup and that the account you are planning to use has read permissions to your variables.
+See [this repository](https://github.com/deathdric/infrastructure-setup-scripts) for howto setup conjur. The sample json configuration file expects that this is application2, so make sure that you have initialized the proper setup and that the account you are planning to use has read permissions to your variables.
 
 Sample assumes that you are using the API Key to login. If you can to use another method of authentication you'll need up adapter the code accordingly
 (better : make it configurable).
